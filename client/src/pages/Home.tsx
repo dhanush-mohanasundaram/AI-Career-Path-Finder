@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ArrowRight, Zap, Map, Code2, BookOpen, X, TrendingUp, Star, CheckCircle2 } from 'lucide-react';
@@ -87,8 +87,8 @@ export default function Home() {
   return (
     <div style={{ minHeight: '100vh', background: '#fff', fontFamily: 'Inter,-apple-system,sans-serif' }}>
 
-      {/* ── Nav — full width, no gaps ── */}
-      <nav style={{ background: '#fff', borderBottom: '1px solid #f0f0f0', position: 'sticky', top: 0, zIndex: 50, width: '100%' }}>
+      {/* â”€â”€ Nav â€” full width, no gaps â”€â”€ */}
+      <nav style={{ background: '#fff', borderBottom: 'none', position: 'sticky', top: 0, zIndex: 50, width: '100%' }}>
         <div style={{ padding: '0 48px', height: 54, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <div style={{ width: 26, height: 26, borderRadius: 6, background: '#09090b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -105,7 +105,7 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* ── Explore Panel ── */}
+      {/* â”€â”€ Explore Panel â”€â”€ */}
       <AnimatePresence>
         {showExplore && (
           <>
@@ -115,7 +115,7 @@ export default function Home() {
             <motion.div initial={{ x: 40, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 40, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 28 }}
               style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 400, background: '#fff', borderLeft: '1px solid #e4e4e7', zIndex: 101, display: 'flex', flexDirection: 'column' }}>
-              <div style={{ padding: '18px 22px 14px', borderBottom: '1px solid #f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div style={{ padding: '18px 22px 14px', borderBottom: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div>
                   <p style={{ fontSize: 15, fontWeight: 700, color: '#09090b' }}>Explore Tech Roles</p>
                   <p style={{ fontSize: 12, color: '#71717a', marginTop: 2 }}>Click any role to forge your learning path</p>
@@ -133,7 +133,7 @@ export default function Home() {
                     const dc = demandColor[demand];
                     return (
                       <button key={r} onClick={() => submit(r)}
-                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 12px', borderRadius: 9, background: '#fafafa', border: '1px solid #f0f0f0', cursor: 'pointer', fontFamily: 'inherit', width: '100%', transition: 'border-color .12s' }}
+                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 12px', borderRadius: 9, background: '#fafafa', border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%', transition: 'border-color .12s' }}
                         onMouseEnter={e => (e.currentTarget.style.borderColor = '#6366f1')}
                         onMouseLeave={e => (e.currentTarget.style.borderColor = '#f0f0f0')}>
                         <span style={{ fontSize: 13, fontWeight: 500, color: '#09090b' }}>{r}</span>
@@ -150,7 +150,7 @@ export default function Home() {
                     const dc = demandColor[demand];
                     return (
                       <button key={r} onClick={() => submit(r)}
-                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '9px 12px', borderRadius: 9, background: '#fafafa', border: '1px solid #f0f0f0', cursor: 'pointer', fontFamily: 'inherit', width: '100%', transition: 'border-color .12s' }}
+                        style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '9px 12px', borderRadius: 9, background: '#fafafa', border: 'none', cursor: 'pointer', fontFamily: 'inherit', width: '100%', transition: 'border-color .12s' }}
                         onMouseEnter={e => (e.currentTarget.style.borderColor = '#6366f1')}
                         onMouseLeave={e => (e.currentTarget.style.borderColor = '#f0f0f0')}>
                         <span style={{ fontSize: 13, color: '#374151' }}>{r}</span>
@@ -165,11 +165,11 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* ── Hero — full width ── */}
+      {/* â”€â”€ Hero â€” full width â”€â”€ */}
       <section style={{ padding: '72px 48px 56px', textAlign: 'center', background: '#fff' }}>
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .45 }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: 999, padding: '3px 11px', fontSize: 11, fontWeight: 600, color: '#2563eb', marginBottom: 24 }}>
-            <Zap size={10} /> Powered by NVIDIA NIM · GLM-5.1
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: '#f4f4f5', border: '1px solid #e4e4e7', borderRadius: 999, padding: '3px 11px', fontSize: 11, fontWeight: 600, color: '#52525b', marginBottom: 24 }}>
+            AI-Powered Career Intelligence
           </div>
           <h1 style={{ fontSize: 48, fontWeight: 800, color: '#09090b', lineHeight: 1.08, letterSpacing: '-0.03em', marginBottom: 16 }}>
             Discover the Skills Behind<br />Every Tech Career
@@ -217,14 +217,14 @@ export default function Home() {
             ))}
             <button onClick={() => setShowExplore(true)}
               style={{ fontSize: 12, color: '#4f46e5', background: '#eef2ff', border: '1px solid #c7d2fe', borderRadius: 999, padding: '5px 12px', cursor: 'pointer', fontFamily: 'inherit', fontWeight: 500 }}>
-              View all roles →
+              View all roles â†’
             </button>
           </div>
         </motion.div>
       </section>
 
-      {/* ── Quote section — pure white ── */}
-      <section style={{ background: '#fff', padding: '56px 48px', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
+      {/* â”€â”€ Quote section â€” pure white, no lines â”€â”€ */}
+      <section style={{ background: '#fff', padding: '56px 48px' }}>
         <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '.12em', marginBottom: 20 }}>Daily Motivation</p>
           <AnimatePresence mode="wait">
@@ -232,7 +232,7 @@ export default function Home() {
               <p style={{ fontSize: 22, fontWeight: 600, color: '#09090b', lineHeight: 1.6, marginBottom: 14, fontStyle: 'italic' }}>
                 "{q.text}"
               </p>
-              <p style={{ fontSize: 13, color: '#71717a', fontWeight: 500 }}>— {q.author}</p>
+              <p style={{ fontSize: 13, color: '#71717a', fontWeight: 500 }}>â€” {q.author}</p>
             </motion.div>
           </AnimatePresence>
           <div style={{ display: 'flex', gap: 6, justifyContent: 'center', marginTop: 24 }}>
@@ -244,8 +244,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── What you get ── */}
-      <section style={{ background: '#fff', padding: '56px 48px', borderBottom: '1px solid #f0f0f0' }}>
+      {/* â”€â”€ What you get â”€â”€ */}
+      <section style={{ background: '#fff', padding: '56px 48px' }}>
         <p style={{ fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 6 }}>What You'll Get</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#09090b', marginBottom: 28 }}>Everything in one analysis</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
@@ -257,7 +257,7 @@ export default function Home() {
             'Soft skills required on the job',
             'Organized by priority and difficulty',
           ].map(item => (
-            <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 9, padding: '14px 16px', background: '#fff', borderRadius: 10, border: '1px solid #f0f0f0' }}>
+            <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: 9, padding: '14px 16px', background: '#fff', borderRadius: 10, border: 'none' }}>
               <CheckCircle2 size={15} color="#16a34a" style={{ flexShrink: 0, marginTop: 1 }} />
               <span style={{ fontSize: 13, color: '#374151', lineHeight: 1.5, fontWeight: 500 }}>{item}</span>
             </div>
@@ -265,15 +265,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── How it works ── */}
-      <section style={{ background: '#fff', padding: '56px 48px', borderBottom: '1px solid #f0f0f0' }}>
+      {/* â”€â”€ How it works â”€â”€ */}
+      <section style={{ background: '#fff', padding: '56px 48px' }}>
         <p style={{ fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 6 }}>How It Works</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#09090b', marginBottom: 28 }}>Three steps to your learning plan</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
           {[
-            { n: '01', t: 'Enter Your Role', d: 'Type any software engineering role — from AI Engineer to DevOps Engineer.' },
+            { n: '01', t: 'Enter Your Role', d: 'Type any software engineering role â€” from AI Engineer to DevOps Engineer.' },
             { n: '02', t: 'AI Does the Research', d: '3 specialized AI agents map every skill, build your roadmap, and recommend projects.' },
-            { n: '03', t: 'Start Learning', d: 'Follow the structured guide with free resources — clear direction, zero confusion.' },
+            { n: '03', t: 'Start Learning', d: 'Follow the structured guide with free resources â€” clear direction, zero confusion.' },
           ].map(({ n, t, d }) => (
             <div key={n} style={{ display: 'flex', alignItems: 'flex-start', gap: 24, padding: '22px 0', borderBottom: '1px solid #f4f4f5' }}>
               <span style={{ fontSize: 13, fontWeight: 800, color: '#d1d5db', letterSpacing: '.05em', flexShrink: 0, paddingTop: 2, minWidth: 28 }}>{n}</span>
@@ -286,13 +286,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Features ── */}
-      <section style={{ background: '#fff', padding: '56px 48px', borderBottom: '1px solid #f0f0f0' }}>
+      {/* â”€â”€ Features â”€â”€ */}
+      <section style={{ background: '#fff', padding: '56px 48px' }}>
         <p style={{ fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 6 }}>Features</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#09090b', marginBottom: 28 }}>Built for aspiring engineers</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
           {FEATURES.map(({ icon: Icon, title, desc }) => (
-            <div key={title} style={{ background: '#fff', border: '1px solid #f0f0f0', borderRadius: 12, padding: '20px' }}>
+            <div key={title} style={{ background: '#fff', border: 'none', borderRadius: 12, padding: '20px' }}>
               <div style={{ width: 34, height: 34, borderRadius: 8, background: '#f4f4f5', border: '1px solid #e4e4e7', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 12 }}>
                 <Icon size={16} color="#374151" strokeWidth={1.8} />
               </div>
@@ -305,7 +305,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer style={{ background: '#09090b', padding: '24px 48px', textAlign: 'center' }}>
-        <p style={{ fontSize: 12, color: 'rgba(255,255,255,.4)' }}>SkillForge AI · Forge the Skills. Build the Future. · Powered by NVIDIA NIM</p>
+        <p style={{ fontSize: 12, color: 'rgba(255,255,255,.4)' }}>SkillForge AI Â· Forge the Skills. Build the Future. Â· Powered by NVIDIA NIM</p>
       </footer>
     </div>
   );
