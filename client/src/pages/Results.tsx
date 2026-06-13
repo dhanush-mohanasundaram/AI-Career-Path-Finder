@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Search, Code2, Map, FolderOpen, Clock, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Search, Code2, Map, FolderOpen, Clock, ExternalLink, Download } from 'lucide-react';
 import { useStore } from '../store/useStore';
 import { RoadmapPhase, ProjectRecommendation, TopicItem } from '../types';
 
@@ -28,6 +28,22 @@ export default function Results() {
 
   const scroll = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
+  const downloadPDF = () => {
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @media print {
+        nav, aside, .no-print { display: none !important; }
+        body { background: white !important; }
+        main { padding: 0 !important; }
+        * { box-shadow: none !important; }
+        @page { margin: 20mm; size: A4; }
+      }
+    `;
+    document.head.appendChild(style);
+    window.print();
+    document.head.removeChild(style);
+  };
+
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       {/* Nav */}
@@ -40,9 +56,15 @@ export default function Results() {
             <div style={{ height: 18, width: 1, background: 'var(--border)' }} />
             <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--text)' }}>{a.role}</span>
           </div>
-          <button onClick={() => nav('/')} className="btn btn-outline" style={{ fontSize: 13, padding: '7px 12px', gap: 6 }}>
-            <Search size={13} /> Analyze New Role
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <button onClick={downloadPDF}
+              style={{ display: 'flex', alignItems: 'center', gap: 6, background: '#09090b', color: '#fff', border: 'none', borderRadius: 8, padding: '7px 14px', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}>
+              <Download size={13} /> Download PDF
+            </button>
+            <button onClick={() => nav('/')} className="btn btn-outline" style={{ fontSize: 13, padding: '7px 12px', gap: 6 }}>
+              <Search size={13} /> Analyze New Role
+            </button>
+          </div>
         </div>
       </nav>
 
