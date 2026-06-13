@@ -62,7 +62,7 @@ export default function Results() {
               <Download size={13} /> Download PDF
             </button>
             <button onClick={() => nav('/')} className="btn btn-outline" style={{ fontSize: 13, padding: '7px 12px', gap: 6 }}>
-              <Search size={13} /> Analyze New Role
+              <Search size={13} /> New Role
             </button>
           </div>
         </div>

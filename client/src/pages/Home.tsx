@@ -94,7 +94,7 @@ export default function Home() {
             <div style={{ width: 26, height: 26, borderRadius: 6, background: '#09090b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Zap size={12} color="#fff" strokeWidth={2.5} />
             </div>
-            <span style={{ fontWeight: 700, fontSize: 14, color: '#09090b', letterSpacing: '-0.01em' }}>AI Career Path Finder</span>
+            <span style={{ fontWeight: 700, fontSize: 14, color: '#09090b', letterSpacing: '-0.01em' }}>SkillForge AI</span>
           </div>
           <button onClick={() => setShowExplore(true)}
             style={{ display: 'flex', alignItems: 'center', gap: 6, background: 'none', border: '1px solid #e4e4e7', borderRadius: 8, padding: '6px 14px', fontSize: 13, color: '#52525b', cursor: 'pointer', fontFamily: 'inherit' }}
@@ -117,8 +117,8 @@ export default function Home() {
               style={{ position: 'fixed', top: 0, right: 0, bottom: 0, width: 400, background: '#fff', borderLeft: '1px solid #e4e4e7', zIndex: 101, display: 'flex', flexDirection: 'column' }}>
               <div style={{ padding: '18px 22px 14px', borderBottom: '1px solid #f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div>
-                  <p style={{ fontSize: 15, fontWeight: 700, color: '#09090b' }}>Trending Tech Roles</p>
-                  <p style={{ fontSize: 12, color: '#71717a', marginTop: 2 }}>Click any role to get your learning guide</p>
+                  <p style={{ fontSize: 15, fontWeight: 700, color: '#09090b' }}>Explore Tech Roles</p>
+                  <p style={{ fontSize: 12, color: '#71717a', marginTop: 2 }}>Click any role to forge your learning path</p>
                 </div>
                 <button onClick={() => setShowExplore(false)} style={{ width: 30, height: 30, borderRadius: 7, background: '#f4f4f5', border: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                   <X size={14} color="#52525b" />
@@ -172,10 +172,10 @@ export default function Home() {
             <Zap size={10} /> Powered by NVIDIA NIM · GLM-5.1
           </div>
           <h1 style={{ fontSize: 48, fontWeight: 800, color: '#09090b', lineHeight: 1.08, letterSpacing: '-0.03em', marginBottom: 16 }}>
-            Discover the Skills Required<br />for Your Dream Tech Role
+            Discover the Skills Behind<br />Every Tech Career
           </h1>
           <p style={{ fontSize: 16, color: '#6b7280', lineHeight: 1.75, marginBottom: 40, maxWidth: 500, margin: '0 auto 40px' }}>
-            AI-powered skill intelligence, learning roadmaps, and project recommendations for aspiring software engineers.
+            Enter any technology role and get a complete AI-powered breakdown of required skills, learning roadmaps, recommended projects, tools, and career guidance.
           </p>
 
           {/* Search */}
@@ -185,11 +185,11 @@ export default function Home() {
               <input value={role} onChange={e => setRole(e.target.value)}
                 onFocus={() => setFocused(true)} onBlur={() => setTimeout(() => setFocused(false), 150)}
                 onKeyDown={e => e.key === 'Enter' && submit()}
-                placeholder="What role do you want to become?"
+                placeholder="Enter a role (e.g. AI Engineer, Backend Engineer, DevOps Engineer...)"
                 style={{ flex: 1, border: 'none', outline: 'none', fontSize: 15, fontFamily: 'inherit', color: '#09090b', background: 'transparent', padding: '7px 0' }} />
               <button onClick={() => submit()} disabled={!role.trim()}
                 style={{ display: 'flex', alignItems: 'center', gap: 5, background: '#09090b', color: '#fff', border: 'none', borderRadius: 9, padding: '9px 20px', fontSize: 13, fontWeight: 600, cursor: role.trim() ? 'pointer' : 'not-allowed', opacity: role.trim() ? 1 : .45, fontFamily: 'inherit' }}>
-                Analyze <ArrowRight size={13} />
+                Forge My Path <ArrowRight size={13} />
               </button>
             </div>
             {suggestions.length > 0 && focused && (
@@ -228,7 +228,7 @@ export default function Home() {
         <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
           <AnimatePresence mode="wait">
             <motion.div key={quoteIdx} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: .35 }}>
-              <p style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,.4)', textTransform: 'uppercase', letterSpacing: '.12em', marginBottom: 20 }}>Daily Motivation</p>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#fafafa', textTransform: 'uppercase', letterSpacing: '.12em', marginBottom: 20 }}>Daily Motivation</p>
               <p style={{ fontSize: 22, fontWeight: 600, color: '#fff', lineHeight: 1.6, marginBottom: 16, fontStyle: 'italic' }}>
                 "{q.text}"
               </p>
@@ -305,7 +305,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer style={{ background: '#09090b', padding: '24px 48px', textAlign: 'center' }}>
-        <p style={{ fontSize: 12, color: 'rgba(255,255,255,.4)' }}>Built for aspiring software engineers · Free to use · Powered by NVIDIA NIM</p>
+        <p style={{ fontSize: 12, color: 'rgba(255,255,255,.4)' }}>SkillForge AI · Forge the Skills. Build the Future. · Powered by NVIDIA NIM</p>
       </footer>
     </div>
   );

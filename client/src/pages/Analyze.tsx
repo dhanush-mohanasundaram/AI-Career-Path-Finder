@@ -38,7 +38,7 @@ export default function Analyze() {
             <div style={{ width: 44, height: 44, borderRadius: 11, background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
               <Zap size={20} color="white" strokeWidth={2.2} />
             </div>
-            <h2 style={{ fontSize: 19, fontWeight: 700, color: 'var(--text)', marginBottom: 8 }}>Analyzing Role</h2>
+            <h2 style={{ fontSize: 19, fontWeight: 700, color: 'var(--text)', marginBottom: 8 }}>Forging Your Path</h2>
             <span style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 7, padding: '4px 12px', fontSize: 13, fontWeight: 600, color: 'var(--text2)' }}>{role}</span>
           </div>
 
@@ -65,7 +65,7 @@ export default function Analyze() {
           </div>
 
           <p style={{ fontSize: 12, color: 'var(--muted2)', textAlign: 'center', marginTop: 24 }}>
-            Generating accurate career guidance…
+            SkillForge AI · Generating your career intelligence…
           </p>
         </motion.div>
       </div>

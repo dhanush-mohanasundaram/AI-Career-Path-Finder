@@ -1,6 +1,8 @@
-# AI Career Path Finder 🚀
+# SkillForge AI 🔥
 
-> Discover the exact skills, tools, and learning roadmap required for any software engineering role — powered by NVIDIA NIM & GLM-5.1.
+> **Forge the Skills. Build the Future.**
+
+Enter any technology role and get a complete AI-powered breakdown of required skills, learning roadmaps, recommended projects, tools, and career guidance.
 
 ## What It Does
 
@@ -8,6 +10,7 @@ Enter any software engineering role and instantly get:
 - **Complete Skill Matrix** — every technical skill, tool, framework, and soft skill required
 - **Phase-by-Phase Learning Roadmap** — structured plan with free learning resources for each topic
 - **Portfolio Projects** — hands-on project ideas with tech stacks that impress recruiters
+- **Download as PDF** — save your full learning guide
 
 ## Tech Stack
 
@@ -15,7 +18,7 @@ Enter any software engineering role and instantly get:
 |-------|-----------|
 | Frontend | React · Vite · TypeScript |
 | Backend | Node.js · Express · TypeScript |
-| AI | NVIDIA NIM · GLM-5.1 (5 specialized agents) |
+| AI | NVIDIA NIM · GLM-5.1 (3 specialized agents) |
 | Database | MongoDB Atlas |
 
 ## AI Agents
@@ -56,18 +59,6 @@ NVIDIA_NIM_API_KEY=your_nvapi_key
 NIM_MODEL=zai-org/glm-5.1
 ```
 
-## Architecture
+---
 
-```
-User enters role
-      ↓
-3 AI Agents run in sequence (via SSE streaming)
-      ↓
-Skill Matrix → Learning Roadmap → Project Recommendations
-      ↓
-Results dashboard with full analysis
-```
-
-## License
-
-MIT
+*SkillForge AI · Forge the Skills. Build the Future. · Powered by NVIDIA NIM*
