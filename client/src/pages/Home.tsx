@@ -223,8 +223,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ── Quote section — light, no dark background ── */}
-      <section style={{ background: '#f8f8f8', padding: '56px 48px', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
+      {/* ── Quote section — pure white ── */}
+      <section style={{ background: '#fff', padding: '56px 48px', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
         <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '.12em', marginBottom: 20 }}>Daily Motivation</p>
           <AnimatePresence mode="wait">
