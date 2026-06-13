@@ -223,29 +223,29 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ── Quote section — full width, no borders, gradient bg ── */}
-      <section style={{ background: 'linear-gradient(135deg, #09090b 0%, #1e1b4b 100%)', padding: '56px 48px' }}>
+      {/* ── Quote section — light, no dark background ── */}
+      <section style={{ background: '#f8f8f8', padding: '56px 48px', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
         <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '.12em', marginBottom: 20 }}>Daily Motivation</p>
           <AnimatePresence mode="wait">
             <motion.div key={quoteIdx} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: .35 }}>
-              <p style={{ fontSize: 11, fontWeight: 700, color: '#fafafa', textTransform: 'uppercase', letterSpacing: '.12em', marginBottom: 20 }}>Daily Motivation</p>
-              <p style={{ fontSize: 22, fontWeight: 600, color: '#fff', lineHeight: 1.6, marginBottom: 16, fontStyle: 'italic' }}>
+              <p style={{ fontSize: 22, fontWeight: 600, color: '#09090b', lineHeight: 1.6, marginBottom: 14, fontStyle: 'italic' }}>
                 "{q.text}"
               </p>
-              <p style={{ fontSize: 13, color: 'rgba(255,255,255,.5)', fontWeight: 500 }}>— {q.author}</p>
+              <p style={{ fontSize: 13, color: '#71717a', fontWeight: 500 }}>— {q.author}</p>
             </motion.div>
           </AnimatePresence>
           <div style={{ display: 'flex', gap: 6, justifyContent: 'center', marginTop: 24 }}>
             {QUOTES.map((_, i) => (
               <div key={i} onClick={() => setQuoteIdx(i)}
-                style={{ width: i === quoteIdx ? 20 : 6, height: 6, borderRadius: 3, background: i === quoteIdx ? '#fff' : 'rgba(255,255,255,.25)', cursor: 'pointer', transition: 'all .25s' }} />
+                style={{ width: i === quoteIdx ? 20 : 6, height: 6, borderRadius: 3, background: i === quoteIdx ? '#09090b' : '#d4d4d8', cursor: 'pointer', transition: 'all .25s' }} />
             ))}
           </div>
         </div>
       </section>
 
       {/* ── What you get ── */}
-      <section style={{ background: '#fafafa', padding: '56px 48px' }}>
+      <section style={{ background: '#fff', padding: '56px 48px', borderBottom: '1px solid #f0f0f0' }}>
         <p style={{ fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 6 }}>What You'll Get</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#09090b', marginBottom: 28 }}>Everything in one analysis</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
@@ -266,7 +266,7 @@ export default function Home() {
       </section>
 
       {/* ── How it works ── */}
-      <section style={{ background: '#fff', padding: '56px 48px' }}>
+      <section style={{ background: '#fff', padding: '56px 48px', borderBottom: '1px solid #f0f0f0' }}>
         <p style={{ fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 6 }}>How It Works</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#09090b', marginBottom: 28 }}>Three steps to your learning plan</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
@@ -287,7 +287,7 @@ export default function Home() {
       </section>
 
       {/* ── Features ── */}
-      <section style={{ background: '#fafafa', padding: '56px 48px' }}>
+      <section style={{ background: '#fff', padding: '56px 48px', borderBottom: '1px solid #f0f0f0' }}>
         <p style={{ fontSize: 11, fontWeight: 700, color: '#a1a1aa', textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 6 }}>Features</p>
         <h2 style={{ fontSize: 26, fontWeight: 700, color: '#09090b', marginBottom: 28 }}>Built for aspiring engineers</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
